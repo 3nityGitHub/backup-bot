@@ -26,7 +26,7 @@ if ! ./precheck.sh; then
     exit 1
 fi
 
-mkdir -p $FINAL_DIR
+mkdir -p "$FINAL_DIR"
 ARCHIVE="$FINAL_DIR/backup-$DATE.tar.gz"
 tar -czf "$ARCHIVE" "$SOURCE_DIR"
 
