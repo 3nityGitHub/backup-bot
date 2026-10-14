@@ -16,6 +16,11 @@ if [ -z "$FINAL_DIR" ]; then
     exit 1
 fi
 
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "Source directory not found: $SOURCE_DIR"
+    exit 1
+fi
+
 if ! ./precheck.sh; then
     echo "Archiving tools not installed"
     exit 1
